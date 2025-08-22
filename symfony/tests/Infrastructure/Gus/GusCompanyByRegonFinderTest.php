@@ -15,7 +15,7 @@ use GusApi\Type\Response\SearchResponseCompanyData;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 
-class GusCompanyByRegonFinderTest extends TestCase
+final class GusCompanyByRegonFinderTest extends TestCase
 {
     private GusApi & MockObject $gusApi;
 

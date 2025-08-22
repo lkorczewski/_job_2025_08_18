@@ -9,23 +9,21 @@ use Doctrine\DBAL\Connection;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
 
-class DoctrineCompaniesQueryTest extends KernelTestCase
+final class DoctrineCompaniesQueryTest extends KernelTestCase
 {
-    private Connection $connection;
-
     private DoctrineCompaniesQuery $query;
 
     private EntityManagerInterface $entityManager;
 
-    public function setUp(): void
+    protected function setUp(): void
     {
         self::bootKernel();
-        $container = static::getContainer();
+        $container = self::getContainer();
         $this->entityManager = $container->get(EntityManagerInterface::class);
-        $this->connection = $container->get(Connection::class);
+        $connection = $container->get(Connection::class);
         $this->query = $container->get(DoctrineCompaniesQuery::class);
 
-        $this->connection->executeQuery('TRUNCATE TABLE companies RESTART IDENTITY;');
+        $connection->executeQuery('TRUNCATE TABLE companies RESTART IDENTITY;');
     }
 
     public function testQueryWhenEmpty(): void

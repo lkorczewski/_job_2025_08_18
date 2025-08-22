@@ -18,7 +18,7 @@ class DoctrineCompanyRepositoryTest extends KernelTestCase
 
     private EntityManagerInterface $entityManager;
 
-    public function setUp(): void
+    protected function setUp(): void
     {
         self::bootKernel();
         $container = static::getContainer();

@@ -14,7 +14,7 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use UnexpectedValueException;
 
-class PostRegonTest extends TestCase
+final class PostRegonTest extends TestCase
 {
     private AddCompanyByRegonInterface & MockObject $addCompanyByRegon;
 

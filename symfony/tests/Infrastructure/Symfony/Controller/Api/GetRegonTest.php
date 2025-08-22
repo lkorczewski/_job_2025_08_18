@@ -8,7 +8,7 @@ use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
-class GetRegonTest extends TestCase
+final class GetRegonTest extends TestCase
 {
     private ListCompaniesInterface & MockObject $listCompanies;
     private GetRegon $controller;

@@ -9,7 +9,7 @@ use Doctrine\DBAL\Connection;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
 
-class DoctrineCompanyByRegonQueryTest extends KernelTestCase
+final class DoctrineCompanyByRegonQueryTest extends KernelTestCase
 {
     private Connection $connection;
 
@@ -17,7 +17,7 @@ class DoctrineCompanyByRegonQueryTest extends KernelTestCase
 
     private EntityManagerInterface $entityManager;
 
-    public function setUp(): void
+    protected function setUp(): void
     {
         self::bootKernel();
         $container = static::getContainer();
