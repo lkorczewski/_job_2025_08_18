@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Tests\Infrastructure\Doctrine\Query;
 
 use App\Domain\Company as DomainCompany;

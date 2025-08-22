@@ -1,10 +1,11 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Tests\Infrastructure\Doctrine\Repository;
 
 use App\Domain\Company as DomainCompany;
 use App\Domain\Exception\DuplicateException;
-use App\Infrastructure\Doctrine\Entity\Company;
 use App\Infrastructure\Doctrine\Repository\DoctrineCompanyRepository;
 use Doctrine\DBAL\Connection;
 use Doctrine\ORM\EntityManagerInterface;
