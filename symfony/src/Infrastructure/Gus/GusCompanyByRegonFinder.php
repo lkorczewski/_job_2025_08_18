@@ -51,7 +51,7 @@ final readonly class GusCompanyByRegonFinder implements CompanyByRegonFinder
     public function findCompanyByRegon(Regon $regon): SearchReport
     {
         try {
-            $reports = $this->gusApi->getByRegon($regon);
+            $reports = $this->gusApi->getByRegon((string)$regon);
         } catch (NotFoundException $exception) {
             throw new DomainNotFoundException('Regon not registered at GUS', previous: $exception);
         }
